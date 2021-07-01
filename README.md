@@ -11,7 +11,7 @@
 
 <h3>📝 Certificates<width = 15"></h3>
 
-- Programming Basics - September 2020 - https://softuni.bg/certificates/details/89007/fb93c62d
+- Programming Basics with C# - September 2020 - https://softuni.bg/certificates/details/89007/fb93c62d
 - Programming Fundamentals with C# - January 2021 - https://softuni.bg/certificates/details/103719/f2c0756f
 
 <!---
