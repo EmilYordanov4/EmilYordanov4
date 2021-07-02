@@ -4,36 +4,23 @@ using System.Linq;
 
 namespace Students
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            List<Students> allStudents = new List<Students>();
+            int n = int.Parse(Console.ReadLine());
+            List<StudentInfo> allStudents = new List<StudentInfo>();
 
-            while (input != "end")
+            for (int i = 0; i < n; i++)
             {
-                string[] information = input.Split().ToArray();
-
-                Students newStudent = new Students();
-
-                newStudent.FirstName = information[0];
-                newStudent.LastName = information[1];
-                newStudent.Age = information[2];
-                newStudent.Hometown = information[3];
+                string[] studentInfo = Console.ReadLine().Split(" ");
+                StudentInfo newStudent = new StudentInfo(studentInfo[0], studentInfo[1], double.Parse(studentInfo[2]));
 
                 allStudents.Add(newStudent);
-
-                input = Console.ReadLine();
             }
+            List<StudentInfo> sortedStudents = allStudents.OrderByDescending(x => x.Grade).ToList();
 
-            string hometownNeeded = Console.ReadLine();
-
-            foreach (Students newStudent in allStudents.Where(x => x.Hometown == hometownNeeded))
-            {
-                Console.WriteLine($"{newStudent.FirstName} {newStudent.LastName} is {newStudent.Age} years old.");
-            }
+            sortedStudents.ForEach(x => Console.WriteLine(x));
         }
     }
 }
