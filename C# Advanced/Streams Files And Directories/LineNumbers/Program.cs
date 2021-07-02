@@ -7,16 +7,33 @@ namespace LineNumbers
     {
         static void Main(string[] args)
         {
-            var path = Path.Combine("data", "Input.txt");
-            var dest = Path.Combine("data", "Output.txt");
+            string path = "text.txt";
+            string outputPath = "output.txt";
+            string[] lines = File.ReadAllLines(path);
 
-            string[] text = File.ReadAllLines(path);
-
-            for (int i = 0; i < text.Length; i++)
+            int letterCounter = 0;
+            int punctuationCounter = 0;
+            int counter = 1;
+            for (int i = 0; i < lines.Length; i++)
             {
-                text[i] = $"{i + 1}. {text[i]}";
+                string word = lines[i];
+                for (int j = 0; j < word.Length; j++)
+                {
+                    if (char.IsLetter(word[j]))
+                    {
+                        letterCounter++;
+                    }
+                    else if (char.IsPunctuation(word[j]))
+                    {
+                        punctuationCounter++;
+                    }
+                }
+                lines[i] = $"Line{counter}: {word} ({letterCounter})({punctuationCounter})";
+                letterCounter = 0;
+                punctuationCounter = 0;
+                counter++;
             }
-            File.WriteAllLines(dest, text);
+            File.WriteAllLines(outputPath, lines);
         }
     }
 }
