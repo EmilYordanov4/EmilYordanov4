@@ -5,6 +5,11 @@
 
 <h3>📝 Certificates<width = 15"></h3>
 
-- Programming Basics with C# - September 2020 - https://softuni.bg/certificates/details/89007/fb93c62d
-- Programming Fundamentals with C# - January 2021 - https://softuni.bg/certificates/details/103719/f2c0756f
-- C# Advanced - May 2021 - https://softuni.bg/certificates/details/108670/45e6ba48
+- Programming Basics with C# - https://softuni.bg/certificates/details/89007/fb93c62d
+- Programming Fundamentals with C# - https://softuni.bg/certificates/details/103719/f2c0756f
+- C# Advanced - https://softuni.bg/certificates/details/108670/45e6ba48
+- C# OOP - https://softuni.bg/certificates/details/113040/b5d2b1db
+- MS SQL - https://softuni.bg/certificates/details/113894/803a62cf
+- Entity Framework Core - https://softuni.bg/certificates/details/119168/a9fec5ea
+- C# Web Basics - https://softuni.bg/certificates/details/126356/5d60b004
+- ASP.NET Core - https://softuni.bg/certificates/details/132660/3ca6a907
